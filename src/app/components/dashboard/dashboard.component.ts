@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ReadDataService } from '../read-data.service';
+import { ReadDataService } from '../../services';
 
 
 @Component({
@@ -10,16 +10,15 @@ import { ReadDataService } from '../read-data.service';
 })
 export class DashboardComponent implements OnInit {
 
-	private pognonData Array<Object> = [];
+	private pognonData: Array<Object> = [];
 
 	constructor(private readDataService: ReadDataService) { }
 
-	ngOnInit() {
-		this.readDataService.parseData("http://localhost:4200/assets/sampleData.csv", this.initPognonData);
+	ngOnInit(): void {
+		this.readDataService.parseData("http://localhost:4200/assets/sampleData.csv", this._initPognonData);
 	}
 
-	initPognonData(data: Array<Object>) {
+	private _initPognonData(data: Array<Object>): void {
 		this.pognonData = data;
 	}
-
 }
