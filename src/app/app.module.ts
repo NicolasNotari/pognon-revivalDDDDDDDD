@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TableauDataComponent } from './tableau-data/tableau-data.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { TableauDataComponent } from './components/tableau-data/tableau-data.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [

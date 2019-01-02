@@ -6,9 +6,9 @@ import * as Papa from 'papaparse/papaparse.min.js';
 })
 export class ReadDataService {
 
-	constructor() { }	
+	constructor() { }
 
-	parseData(url, callBack) {
+	parseData(url, callBack): void {
     	Papa.parse(url, {
         	download: true,
         	dynamicTyping: true,
